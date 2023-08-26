@@ -93,13 +93,6 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
   html
     font-family: $font-stack
 
-  body, #leftbar
-    border: 0
-    padding-top: 30px
-    background-color: $bg-color
-    border-color: $hover-grey
-    color: $white
-
   #scrambleDiv, #stats, #toolsDiv
     box-shadow: none
     border: 0
@@ -129,31 +122,25 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
     font-weight: 300
     font-size: .1em
 
-  #logo
-    display: none
-
+  /* ==================
+   * LEFTBAR
+   * the button grid in the top-left corner
+   * ================== */
   #leftbar
     display: block
     top: 0
     margin-top: 0
     height: auto
-
-    div
-      border-radius: 40px
-
-  .mybutton
     border: 0
-    font-family: $font-stack
+    padding-top: 30px
+    background-color: $bg-color
+    color: $white
 
-    span
-      padding: 7px 2px
-
-    &.enable
-      span
-        color: $white
-
-  #leftbar div
-    &.c1, &.c2, &.c3, &.c4, &.c5, &.c6
+    // each button
+    .mybutton
+      border: 0
+      border-radius: 40px !important
+      font-family: $font-stack
       display: inline-block
       left: auto
       bottom: auto
@@ -166,20 +153,35 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
 
       &.enable
         background-color: $secondary-color
+        span
+          color: $white
 
       &:hover
         background-color: $hover-bg-color
 
+      // the text/icons of each button
       span
+        padding: 7px 2px
         font-family: $font-stack
         font-size: 13px
+        font-weight: 400
+
+        &:first-child
+          display: inline-block !important
+
+        &:last-child
+          display: none !important
 
       br
         display: none
 
-    // hide "List Times", "Donate", and "Scramble"
-    &.c5, &.c3, &.c4
-      display: none
+      // hide "List Times", "Donate", and "Scramble" buttons
+      &.c5, &.c3, &.c4
+        display: none
+
+      // hide "Logo" button
+      &#logo
+        display: none
 
   #stats
     font-family: $font-stack
