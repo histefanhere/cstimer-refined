@@ -9,374 +9,375 @@
 @homepageURL    https://github.com/histefanhere/cstimer-refined
 ==/UserStyle== */
 
-$font-stack:          'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif
-$font-stack-mono:     'Source Code Pro', 'Monaco', monospace
-$secondary-color:     #58f
-$darkened-text-color: #2a4881
-$bg-color:            #001
-$white:               #fff
-$red:                 #c73737
-$hover-grey:          #223
-$ui-grey:             #334
-$button-hover-color:  #112
-$line-color:          darken($darkened-text-color, 20%)
-$hover-bg-color:      darken($darkened-text-color, 15%)
+$font-stack =          'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif
+$font-stack-mono =     'Source Code Pro', 'Monaco', monospace
+$secondary-color =     #58f
+$darkened-text-color = #2a4881
+$bg-color =            #001
+$white =               #fff
+$red =                 #c73737
+$hover-grey =          #223
+$ui-grey =             #334
+$button-hover-color =  #112
+$line-color =          darken($darkened-text-color, 20%)
+$hover-bg-color =      darken($darkened-text-color, 15%)
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
+@-moz-document domain("cstimer.net")
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
 
-@mixin select-field
-  padding: 6px 12px
-  color: $darkened-text-color
-  border: 1px solid $darkened-text-color
-  margin-right: 10px
-  font-size: 15px
-
-// Forces cstimer of `#fff#001#112#08f#58f#000#000` so I can't override it
-
-html, body, textarea
-  color: $white
-  background-color: $bg-color
-
-.mybutton, .tab, .cntbar
-  border-color: $ui-grey
-
-.mybutton:hover, .tab:hover, .mywindow, .popup, .dialog
-  background-color: $button-hover-color
-
-.mybutton.enable, .tab.enable, .cntbar
-  background-color: $secondary-color
-
-#gray
-  background-color: $white
-
-.times:hover, .click:hover, textarea
-  background-color: $hover-bg-color
-
-.click
-  color: $secondary-color
-
-  &:hover
-    background-color: $hover-bg-color
-
-.mywindow, .popup, .dialog
-  border-color: $ui-grey
-
-.table
-  border: 0
-  padding: 5px
-
-  td, th
-    border: 0
-    padding: 5px
-
-textarea, .tabValue
-  border-color: $ui-grey
-
-#avgstr .click:hover
-  background-color: $hover-bg-color
-
-select
-  color: $darkened-text-color
-  border-color: $ui-grey
-  background: $bg-color
-
-input
-  &[type='button'], &[type='text']
-    color: $white
-    background: $bg-color
-    border-color: $ui-grey
-
-  &:disabled
-    background: $hover-grey
-
-html
-  font-family: $font-stack
-
-body, #leftbar
-  border: 0
-  padding-top: 30px
-  background-color: $bg-color
-  border-color: $hover-grey
-  color: $white
-
-#scrambleDiv, #stats, #toolsDiv
-  box-shadow: none
-  border: 0
-
-.mywindow, .popup, .dialog, #leftbar
-  box-shadow: none
-
-table.sumtable
-  border-style: none
-
-div.myscroll
-  border-top: 1px solid $line-color
-  margin-top: 15px
-  padding-top: 15px
-  padding-bottom: 30px
-
-input:disabled
-  background: $darkened-text-color
-
-#lcd
-  font-family: $font-stack
-  font-weight: 100
-  font-size: 80%
-
-#avgstr
-  font-family: $font-stack
-  font-weight: 300
-  font-size: .1em
-
-#logo
-  display: none
-
-#leftbar
-  display: block
-  top: 0
-  margin-top: 0
-  height: auto
-
-  div
-    border-radius: 40px
-
-.mybutton
-  border: 0
-  font-family: $font-stack
-
-  span
-    padding: 7px 2px
-
-  &.enable
-    span
-      color: $white
-
-#leftbar div
-  &.c1, &.c2, &.c3, &.c4, &.c5, &.c6
-    display: inline-block
-    left: auto
-    bottom: auto
-    right: auto
-    top: auto
-    position: static
-    width: auto
-    padding: 0 10px
-    color: $secondary-color
-
-    &.enable
-      background-color: $secondary-color
-
-    &:hover
-      background-color: $hover-bg-color
-
-    span
-      font-family: $font-stack
-      font-size: 13px
-
-    br
-      display: none
-
-  // hide "List Times", "Donate", and "Scramble"
-  &.c5, &.c3, &.c4
-    display: none
-
-#stats
-  font-family: $font-stack
-  top: 4em
-  margin-top: 30px
-  font-size: 16px
-  padding: 0 0 10px 10px
-  background-color: transparent
-  color: $darkened-text-color
-  transition: .1s linear color
-  // make times displayed by default
-  display: block
-
-  &:hover
-    color: lighten($darkened-text-color, 30%)
-    transition: .1s linear color
-
-  .sumtable
-    border-top: 1px solid $line-color
-    margin-top: 20px
-    padding-top: 25px
-
-    tr:first-child
-      th
-        padding-top: 15px
-
-  span.click
-    padding-right: 10px
-    text-align: left
-
-    &:hover
-      background-color: $hover-bg-color
-
-  select, input
-    padding: 3px 6px
+  @mixin select-field
+    padding: 6px 12px
     color: $darkened-text-color
     border: 1px solid $darkened-text-color
     margin-right: 10px
     font-size: 15px
 
-  input
-    font-weight: bold
+  // Forces cstimer of `#fff#001#112#08f#58f#000#000` so I can't override it
 
-#scrambleDiv
-  background-color: transparent
-
-  .title
-    padding-top: 20px
-
-  select
-    @include select-field
-
-  nobr
-    font-family: $font-stack
-    font-size: 15px
-    color: $darkened-text-color
-
-    span
-      padding: 5px 10px
-
-#scrambleTxt
-  // sass-lint:disable no-important
-  font-size: 24px !important
-  font-family: $font-stack-mono
-  padding: 30px 0
-  color: lighten($darkened-text-color, 20%)
-
-#toolsDiv
-  font-family: $font-stack
-  padding: 0 20px 20px 10px
-  border-radius: 10px 0 0
-  color: lighten($darkened-text-color, 10%)
-  display: table
-  background-color: transparent
-
-  br
-    display: none
-
-  div
-    display: table-cell
-    vertical-align: bottom
-    font-size: 15px
-    padding: 10px
-
-    canvas
-      width: 200px !important
-      height: 150px !important
-
-    div
-      font-family: $font-stack
-      font-size: 14px
-      line-height: 2
-      padding-bottom: 20px
-
-      br
-        display: block
-
-  select
-    font-size: 13px
-    background-color: transparent
-    padding: 6px 8px
-    border: 1px solid $darkened-text-color
-
-.popup
-  border: 0
-  padding: 10px 20px 0
-  font-family: $font-stack
-  line-height: 2
-  font-size: 14px
-  color: transparent
-  text-align: left
-
-  [type='button']
-    background-color: $red
+  html, body, textarea
     color: $white
-    margin-left: 10px
-    padding: 5px 9px
-    font-weight: bold
-    margin-bottom: 10px
-    border-radius: 50px
+    background-color: $bg-color
 
-  input
-    &[type='text']
-      display: none
+  .mybutton, .tab, .cntbar
+    border-color: $ui-grey
 
-  span
-    &:first-child
-      color: $white
+  .mybutton:hover, .tab:hover, .mywindow, .popup, .dialog
+    background-color: $button-hover-color
+
+  .mybutton.enable, .tab.enable, .cntbar
+    background-color: $secondary-color
+
+  #gray
+    background-color: $white
+
+  .times:hover, .click:hover, textarea
+    background-color: $hover-bg-color
 
   .click
-    background-color: $darkened-text-color
-    padding: 5px 10px
-    color: $white
-    border-radius: 3px
-    display: auto
+    color: $secondary-color
 
-.dialog
-  border: none
-  opacity: 1.0
-  font-size: 14px
-  color: lighten($darkened-text-color, 20%)
+    &:hover
+      background-color: $hover-bg-color
 
-  select, input
-    padding: 6px 12px
-    color: $darkened-text-color
-    border: 1px solid $darkened-text-color
-    font-weight: bold
-    margin-left: 10px
-    margin-right: 20px
-    font-size: 14px
-    float: right
+  .mywindow, .popup, .dialog
+    border-color: $ui-grey
 
-  .value
-    position: auto
-
-  .tab
+  .table
     border: 0
+    padding: 5px
+
+    td, th
+      border: 0
+      padding: 5px
+
+  textarea, .tabValue
+    border-color: $ui-grey
+
+  #avgstr .click:hover
+    background-color: $hover-bg-color
+
+  select
+    color: $darkened-text-color
+    border-color: $ui-grey
+    background: $bg-color
+
+  input
+    &[type='button'], &[type='text']
+      color: $white
+      background: $bg-color
+      border-color: $ui-grey
+
+    &:disabled
+      background: $hover-grey
+
+  html
     font-family: $font-stack
-    text-align: right
-    padding: 10px 20px
 
-    &.enable
-      color: #fff
+  body, #leftbar
+    border: 0
+    padding-top: 30px
+    background-color: $bg-color
+    border-color: $hover-grey
+    color: $white
 
-  table
-    position: auto
+  #scrambleDiv, #stats, #toolsDiv
+    box-shadow: none
+    border: 0
 
-    td
-      vertical-align: top
+  .mywindow, .popup, .dialog, #leftbar
+    box-shadow: none
 
-  .title
+  table.sumtable
+    border-style: none
+
+  div.myscroll
+    border-top: 1px solid $line-color
+    margin-top: 15px
+    padding-top: 15px
+    padding-bottom: 30px
+
+  input:disabled
+    background: $darkened-text-color
+
+  #lcd
+    font-family: $font-stack
+    font-weight: 100
+    font-size: 80%
+
+  #avgstr
+    font-family: $font-stack
+    font-weight: 300
+    font-size: .1em
+
+  #logo
     display: none
 
-  .tabValue
-    border: none
+  #leftbar
+    display: block
+    top: 0
+    margin-top: 0
+    height: auto
 
-    li
-      padding: 10px 0
-      border-bottom: 1px solid rgba(255,255,255,0.05)
+    div
+      border-radius: 40px
 
-      &:last-child
-        border-bottom: 0
+  .mybutton
+    border: 0
+    font-family: $font-stack
 
-  .button
+    span
+      padding: 7px 2px
+
+    &.enable
+      span
+        color: $white
+
+  #leftbar div
+    &.c1, &.c2, &.c3, &.c4, &.c5, &.c6
+      display: inline-block
+      left: auto
+      bottom: auto
+      right: auto
+      top: auto
+      position: static
+      width: auto
+      padding: 0 10px
+      color: $secondary-color
+
+      &.enable
+        background-color: $secondary-color
+
+      &:hover
+        background-color: $hover-bg-color
+
+      span
+        font-family: $font-stack
+        font-size: 13px
+
+      br
+        display: none
+
+    // hide "List Times", "Donate", and "Scramble"
+    &.c5, &.c3, &.c4
+      display: none
+
+  #stats
+    font-family: $font-stack
+    top: 4em
+    margin-top: 30px
+    font-size: 16px
+    padding: 0 0 10px 10px
+    background-color: transparent
+    color: $darkened-text-color
+    transition: .1s linear color
+    // make times displayed by default
+    display: block
+
+    &:hover
+      color: lighten($darkened-text-color, 30%)
+      transition: .1s linear color
+
+    .sumtable
+      border-top: 1px solid $line-color
+      margin-top: 20px
+      padding-top: 25px
+
+      tr:first-child
+        th
+          padding-top: 15px
+
+    span.click
+      padding-right: 10px
+      text-align: left
+
+      &:hover
+        background-color: $hover-bg-color
+
+    select, input
+      padding: 3px 6px
+      color: $darkened-text-color
+      border: 1px solid $darkened-text-color
+      margin-right: 10px
+      font-size: 15px
+
+    input
+      font-weight: bold
+
+  #scrambleDiv
+    background-color: transparent
+
+    .title
+      padding-top: 20px
+
+    select
+      @include select-field
+
+    nobr
+      font-family: $font-stack
+      font-size: 15px
+      color: $darkened-text-color
+
+      span
+        padding: 5px 10px
+
+  #scrambleTxt
+    // sass-lint:disable no-important
+    font-size: 24px !important
+    font-family: $font-stack-mono
+    padding: 30px 0
+    color: lighten($darkened-text-color, 20%)
+
+  #toolsDiv
+    font-family: $font-stack
+    padding: 0 20px 20px 10px
+    border-radius: 10px 0 0
+    color: lighten($darkened-text-color, 10%)
+    display: table
+    background-color: transparent
+
+    br
+      display: none
+
+    div
+      display: table-cell
+      vertical-align: bottom
+      font-size: 15px
+      padding: 10px
+
+      canvas
+        width: 200px !important
+        height: 150px !important
+
+      div
+        font-family: $font-stack
+        font-size: 14px
+        line-height: 2
+        padding-bottom: 20px
+
+        br
+          display: block
+
+    select
+      font-size: 13px
+      background-color: transparent
+      padding: 6px 8px
+      border: 1px solid $darkened-text-color
+
+  .popup
+    border: 0
+    padding: 10px 20px 0
+    font-family: $font-stack
+    line-height: 2
+    font-size: 14px
+    color: transparent
     text-align: left
-    margin-left: 120px
-    padding: 10px 0
 
-    .buttonOK
-      padding: 10px 20px
-      margin: 0 10px 0 0
+    [type='button']
+      background-color: $red
+      color: $white
+      margin-left: 10px
+      padding: 5px 9px
+      font-weight: bold
+      margin-bottom: 10px
+      border-radius: 50px
+
+    input
+      &[type='text']
+        display: none
+
+    span
+      &:first-child
+        color: $white
+
+    .click
+      background-color: $darkened-text-color
+      padding: 5px 10px
+      color: $white
+      border-radius: 3px
+      display: auto
+
+  .dialog
+    border: none
+    opacity: 1.0
+    font-size: 14px
+    color: lighten($darkened-text-color, 20%)
+
+    select, input
+      padding: 6px 12px
+      color: $darkened-text-color
+      border: 1px solid $darkened-text-color
+      font-weight: bold
+      margin-left: 10px
+      margin-right: 20px
+      font-size: 14px
+      float: right
+
+    .value
+      position: auto
+
+    .tab
       border: 0
-      background-color: #08f
-      color: #fff
+      font-family: $font-stack
+      text-align: right
+      padding: 10px 20px
 
-      &:last-child
-        background-color: $red
+      &.enable
+        color: #fff
 
-#gray
-  background-color: #000
-  opacity: 0.85 !important
+    table
+      position: auto
+
+      td
+        vertical-align: top
+
+    .title
+      display: none
+
+    .tabValue
+      border: none
+
+      li
+        padding: 10px 0
+        border-bottom: 1px solid rgba(255,255,255,0.05)
+
+        &:last-child
+          border-bottom: 0
+
+    .button
+      text-align: left
+      margin-left: 120px
+      padding: 10px 0
+
+      .buttonOK
+        padding: 10px 20px
+        margin: 0 10px 0 0
+        border: 0
+        background-color: #08f
+        color: #fff
+
+        &:last-child
+          background-color: $red
+
+  #gray
+    background-color: #000
+    opacity: 0.85 !important
