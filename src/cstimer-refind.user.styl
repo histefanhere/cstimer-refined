@@ -25,13 +25,6 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
 @-moz-document domain("cstimer.net")
   @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
 
-  @mixin select-field
-    padding: 6px 12px
-    color: $darkened-text-color
-    border: 1px solid $darkened-text-color
-    margin-right: 10px
-    font-size: 15px
-
   // Forces cstimer of `#fff#001#112#08f#58f#000#000` so I can't override it
 
   html, body, textarea
@@ -232,7 +225,11 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
       padding-top: 20px
 
     select
-      @include select-field
+      padding: 6px 12px
+      color: $darkened-text-color
+      border: 1px solid $darkened-text-color
+      margin-right: 10px
+      font-size: 15px
 
     nobr
       font-family: $font-stack
