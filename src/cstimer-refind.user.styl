@@ -132,7 +132,7 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
     // each button
     .mybutton
       border: 0
-      border-radius: 40px !important
+      border-radius: 8px !important
       font-family: $font-stack
       display: inline-block
       left: auto
@@ -152,18 +152,29 @@ $hover-bg-color =      darken($darkened-text-color, 15%)
       &:hover
         background-color: $hover-bg-color
 
+      div
+        display: inline-flex !important
+        align-items: center
+
       // the text/icons of each button
       span
-        padding: 7px 2px
+        padding: 7px 3px
         font-family: $font-stack
         font-size: 13px
         font-weight: 400
+        display: inline-block !important
+        height: 100%;
+        align-items: center
+        text-transform: lowercase
 
-        &:first-child
-          display: inline-block !important
+        // transforms the ALL UPPERCASE TEXT of the buttons to Nice Capitalized Text
+        &::first-letter
+          text-transform: uppercase
 
+        // shows the icon and puts it before the text
         &:last-child
-          display: none !important
+          font-family: 'iconfont'
+          order: -1
 
       br
         display: none
